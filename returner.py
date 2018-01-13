@@ -25,6 +25,8 @@ for i in range(1,1000):
             time.sleep(1)
       except Exception:
             break
+if len(toReturn) == 0:
+      exit("Не найдено бесед, в которые можно вернуться.")
 print("Беседы, в которые можно вернуться:")
 for i in toReturn:
       print("{0}. {1}".format(i, vk.messages.getChat(chat_id=i).get('title')))
